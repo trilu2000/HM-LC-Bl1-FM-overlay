@@ -349,7 +349,13 @@ healthchecksdb
 MigrationBackup/
 
 # own settings
+__vm
+__vm/
 *vm/
 *.sln
 *.vcxproj
 *vcxproj.filters
+cpp.hint
+[Dd]ebug/
+.vs/
+.git/
