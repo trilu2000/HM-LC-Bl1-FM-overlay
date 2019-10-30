@@ -52,7 +52,7 @@ const struct DeviceInfo PROGMEM devinfo = {
  */
 typedef AvrSPI<10, 11, 12, 13> RadioSPI;
 typedef AskSin<StatusLed<LED_PIN>, NoBattery, Radio<RadioSPI, 2> > Hal;
-
+//typedef AskSin<StatusLed<LED_PIN>, NoBattery, NoRadio> Hal;
 
 /**
 * Keybutton template to monitor and bebounce input pins,
@@ -110,13 +110,13 @@ public:
 };
 
 // declare keybutton instances 
-KeyButton<HIGH, INPUT_PULLUP> key_opened;											
-KeyButton<HIGH, INPUT_PULLUP> key_closed;
-KeyButton<HIGH, INPUT_PULLUP> key_start;
-KeyButton<HIGH, INPUT_PULLUP> key_learn;
+KeyButton<HIGH, INPUT> key_opened;											
+KeyButton<HIGH, INPUT> key_closed;
+KeyButton<HIGH, INPUT> key_start;
+KeyButton<HIGH, INPUT> key_learn;
 
-KeyButton<LOW, INPUT_PULLUP> pin_dir_r1;
-KeyButton<LOW, INPUT_PULLUP> pin_dir_r2;
+KeyButton<LOW, INPUT> pin_dir_r1;
+KeyButton<LOW, INPUT> pin_dir_r2;
 
 /**
 * interface and state machine to drive the motor up and down
@@ -221,6 +221,7 @@ public:
 	* 0 start button pressed, 1 for door opened or 2 for door closed */
 	void statemachine(uint8_t position) {
 
+		if ((status == false) && (position != 0)) return;					// nothing to do while not enabled and no enable flag sent
 		DPRINT(F("learn, "));												// some debug
 
 		switch (position) {													// process the input
@@ -367,8 +368,8 @@ void setup () {
 	digitalWrite(PIN_RESET_PIN, HIGH);
 
 	buttonISR(key_config, BTN_CONFIG_PIN);									// irq bridge for the button templates
-	buttonISR(key_hmup__, BTN_HMUP___PIN);
-	buttonISR(key_hmdown, BTN_HMDOWN_PIN);
+	//buttonISR(key_hmup__, BTN_HMUP___PIN);
+	//buttonISR(key_hmdown, BTN_HMDOWN_PIN);
 
 	buttonISR(key_opened, KEY_OPENED_PIN);
 	buttonISR(key_closed, KEY_CLOSED_PIN);

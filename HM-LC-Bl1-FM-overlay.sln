@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HM-LC-Bl1-FM", "HM-LC-Bl1-FM.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HM-LC-Bl1-FM-overlay", "HM-LC-Bl1-FM-overlay.vcxproj", "{C45DBE1B-E52F-4815-A5D3-8843CBA2F15E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HM-LC-Bl1-FM-overlay", "HM-LC-Bl1-FM-overlay.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,15 +15,11 @@ Global
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
-		{C45DBE1B-E52F-4815-A5D3-8843CBA2F15E}.Debug|x86.ActiveCfg = Debug|Win32
-		{C45DBE1B-E52F-4815-A5D3-8843CBA2F15E}.Debug|x86.Build.0 = Debug|Win32
-		{C45DBE1B-E52F-4815-A5D3-8843CBA2F15E}.Release|x86.ActiveCfg = Release|Win32
-		{C45DBE1B-E52F-4815-A5D3-8843CBA2F15E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F70DC75E-6A8C-4B8F-9923-D3DB09725F5B}
+		SolutionGuid = {FF6E7CAA-96EE-4F85-8263-E43A626FE401}
 	EndGlobalSection
 EndGlobal
